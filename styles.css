@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    color: #333A73;
+    margin: 0;
+}
+.w-1024{
+    width: 1024px;
+    margin: auto;
+}
+
+.container{
+    width: 100%;
+}
+.navegation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 3em;
+}
+
+/* *************************************** */
+/* MENU DE NAVEGACION CON MENU HAMBURGUESA */
+/* *************************************** */
+#check{
+    display: none;
+}
+.checkbtn{
+    display: none;
+}
+
+.navegation ul{
+    display: flex;
+    flex-direction: row;
+}
+.navegation ul li{
+    list-style: none;
+}
+.navegation ul li a{
+    text-decoration: none;
+    padding: 5px 13px;
+    border-radius: 8px;
+    margin: 0 5px;
+
+    transition: all 0.5s;
+}
+.navegation ul li a:hover{
+    background-color: #FFC700;
+    color: #333A73;
+}
+
+
+/* ********************** */
+/* CONTENIDO DE LA PAGINA */
+/* ********************** */
+.contenido{
+    margin-bottom: 100px;
+}
+.title{
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.welcome{
+    display: block;
+    background-color: #FFC700;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 30px;
+
+    font-weight: 600;
+}
+.description{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin-bottom: 30px;
+}
+.my-description{
+    margin-right: 50px;
+}
+.profile{
+    width: 180px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/* GALERIA DE PROYECTOS */
+.galery{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.subtitle{
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.img-galery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width: 300px;
+    height: 145px;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+.img:hover{
+    transform: scale(1.01);
+}
+
+
+/* FORMULARIO DE CONTACTO */
+.contact-me{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 25px;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+.inputs label{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.text-box{
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid #333A73;
+}
+.btn-submit{
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #333A73;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* ************* */
+/* PIE DE PAGINA */
+/* ************* */
+.footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #FFC700;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.social li{
+    list-style: none;
+}
+.social li a{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* ***************************** */
+/* PAGINA ADAPTABLE PARA MOBILES */
+/* ***************************** */
+
+@media (max-width: 1024px){
+    .w-1024{
+        width: calc(100% - 40px) ;
+        padding: 20px;
+    }
+    .logo{
+        margin-left: 20px;
+    }
+    .checkbtn{
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    .navegation ul{
+        position: fixed;
+        flex-direction: column;
+        padding: 0;
+        background-color: #333A73;
+        width: 100%;
+        height: 100vh;
+
+        top: 112px;
+        left: 100%;
+
+        transition: all 0.5s;
+    }
+    .navegation ul li{
+        margin:  40px 0;
+        line-height: 30px;
+        text-align: center;
+    }
+    .navegation ul li a{
+        color: #fff;
+    }
+
+
+    #check:checked ~ ul{
+        left: 0%;
+    }
+
+    /* ********************** */
+    /* CONTENIDO DE LA PAGINA */
+    /* ********************** */
+
+    .contenido{
+        padding: 0 20px;
+    }
+    .description{
+        grid-template-columns: auto;
+    }
+    .my-description{
+        margin: 0 0 20px 0;
+    }
+    .profile{
+        width: 300px;
+    }
+
+    .contact-me{
+        width: 100%;
+    }
+
+    .social{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+    }
+}
